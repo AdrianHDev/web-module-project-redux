@@ -4,9 +4,9 @@ import MovieListItem from "./MovieListItem";
 import MovieFooter from "./MovieFooter";
 import { connect } from "react-redux";
 
-
 const MovieList = (props) => {
-  return (
+
+    return (
     <div className="col">
       <table className="table table-striped table-hover">
         <thead>
@@ -32,9 +32,9 @@ const MovieList = (props) => {
 };
 
 const mapStateAsProps = (state) => {
-    return {
-      movies: state.movies,
-    };
+  return {
+    movies: state.movies,
   };
+};
 
 export default connect(mapStateAsProps, {})(MovieList);
