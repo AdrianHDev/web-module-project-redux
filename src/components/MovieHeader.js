@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Movie from './Movie';
 
 const MovieHeader = (props) => {
     const appTitle = "";
@@ -19,4 +21,10 @@ const MovieHeader = (props) => {
     </div>);
 }
 
-export default MovieHeader;
+const mapStateAsProps = (state) => {
+    return {
+      appTitle: state.movies.appTitle,
+    };
+  };
+
+export default connect(mapStateAsProps, {})(MovieHeader);
