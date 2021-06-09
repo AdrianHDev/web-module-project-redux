@@ -25,7 +25,7 @@ const AddMovieForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         props.addMovie({...movie, id: props.movies.length})
-        push('movies/')
+        push('/movies/')
     }
 
     const { title, director, genre, metascore, description } = movie;
@@ -72,7 +72,7 @@ const AddMovieForm = (props) => {
 
 const mapStateAsProps = (state) => {
     return {
-        movies: state.movies
+        movies: state.movies.movies
     }
 }
 

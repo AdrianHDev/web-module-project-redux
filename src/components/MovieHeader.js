@@ -23,7 +23,7 @@ const MovieHeader = (props) => {
 
 const mapStateAsProps = (state) => {
     return {
-      appTitle: state.appTitle,
+      appTitle: state.movies.appTitle,
     };
   };
 
